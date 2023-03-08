@@ -1,0 +1,12 @@
+.inputCSS{ 
+    color: white; 
+    display: flex; 
+    width: auto; 
+}
+
+.gridCheckbox{ 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 38px;
+}

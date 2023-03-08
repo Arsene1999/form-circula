@@ -1,5 +1,7 @@
-import { useForm, UseFormRegister } from "react-hook-form";
+import { UseFormRegister } from "react-hook-form";
+import { InputLabel } from "../InputLabel";
 import { FormData } from "./../../dataType";
+import "./styles.scss";
 
 type FirstSectionProp = {
   register: UseFormRegister<FormData>;
@@ -8,17 +10,26 @@ type FirstSectionProp = {
 function FirstSection({ register }: FirstSectionProp) {
   return (
     <>
-      <h3>Dados do solicitante</h3>
-      <label>Nome do Solicitante:</label>
-      <input {...register("nome_solicitante")} />
-      <label>Código da Formulação:</label>
-      <input {...register("codigo_formulacao")} />
-      <label>Ponto de Controle:</label>
-      <input {...register("des_ponto_controle")} />
-      <label>Projeto:</label>
-      <input {...register("des_projeto")} />
-      <label>Observações:</label>
-      <input {...register("des_observacoes")} />
+      <h5 className="subTitle">Dados do solicitante</h5>
+      <div className="paddingExceptLast">
+        <InputLabel
+          text={"Nome do Solicitante"}
+          {...register("nome_solicitante", { required: true })}
+        />
+        <InputLabel
+          text={"Código da Formulação"}
+          {...register("codigo_formulacao", { required: true })}
+        />
+        <InputLabel
+          text={"Ponto de Controle"}
+          {...register("des_ponto_controle", { required: true })}
+        />
+        <InputLabel
+          text={"Projeto"}
+          {...register("des_projeto", { required: true })}
+        />
+        <InputLabel text={"Observações"} {...register("des_observacoes")} />
+      </div>
     </>
   );
 }

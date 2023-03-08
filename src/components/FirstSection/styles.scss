@@ -1,0 +1,5 @@
+.paddingExceptLast{
+    label:not(:last-child){
+        input{margin-bottom: 32px};  
+    }
+}

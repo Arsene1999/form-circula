@@ -24,7 +24,7 @@ function FourthSection({ register }: FourthSectionProp) {
 
   return (
     <>
-      <h3>Quantidade de tempo para cada ensaio</h3>
+      <h5 className="subTitle">Quantidade de tempo para cada ensaio</h5>
       {renderInput()}
       <a onClick={() => setSize((previous) => previous + 1)}>Adicionar Campo</a>
     </>

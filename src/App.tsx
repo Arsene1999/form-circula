@@ -16,6 +16,7 @@ function App() {
 
   return (
     <form onSubmit={onSubmit}>
+      <h4 className="title">Solicitação de ensaios</h4>
       <FirstSection register={register} />
       <SelectSection register={register} />
       <ThirdSection register={register} />

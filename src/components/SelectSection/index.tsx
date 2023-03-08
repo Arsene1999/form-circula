@@ -1,5 +1,6 @@
 import { UseFormRegister } from "react-hook-form";
 import { FormData } from "./../../dataType";
+import "./styles.css";
 
 type SelectSectionProp = {
   register: UseFormRegister<FormData>;
@@ -8,9 +9,8 @@ type SelectSectionProp = {
 function SelectSection({ register }: SelectSectionProp) {
   return (
     <>
-      <h3>Tipo do Ensaio</h3>
-      <h5 style={{ color: "white" }}>Qual é o tipo do ensaio?</h5>
-      <select {...register("tipo_ensaio")}>
+      <h5 className="subTitle">Tipo do Ensaio</h5>
+      <select className="selectStyle" {...register("tipo_ensaio")}>
         <option value="">Selecione uma opção</option>
         <option value="Desenvolvimento">Desenvolvimento</option>
         <option value="Produção">Produção</option>

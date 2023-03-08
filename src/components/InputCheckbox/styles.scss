@@ -1,0 +1,36 @@
+.labelCSS{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    border: 1px solid #A2A59A;
+    border-radius:4px;
+    padding: 13px;
+
+    input {
+        width: 20px;
+        height:20px;
+        background: #92AF3A;
+    }
+    
+  }
+
+  .labelCheckedCSS{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    border: 1px solid #92AF3A;
+    border-radius:4px;
+    padding: 13px;
+    background: rgba(155, 191, 48, 0.1);
+
+    input {
+        width: 20px;
+        height:20px;
+        background: #92AF3A;
+        color: #92AF3A;
+    }
+  }
+
+
