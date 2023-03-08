@@ -1,5 +1,5 @@
 import { UseFormRegister } from "react-hook-form";
-import { FormData } from "./../../dataType";
+import { FormData } from "./../../types/index";
 import "./styles.css";
 
 type SelectSectionProp = {

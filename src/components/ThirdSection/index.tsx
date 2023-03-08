@@ -2,7 +2,7 @@ import { useState } from "react";
 import { UseFormRegister } from "react-hook-form";
 import { InputCheckbox } from "../InputCheckbox";
 import { InputLabel } from "../InputLabel";
-import { FormData } from "./../../dataType";
+import { FormData } from "./../../types/index";
 import "./styles.scss";
 
 type ThirdSectionProp = {

@@ -1,6 +1,6 @@
 import { UseFormRegister } from "react-hook-form";
 import { InputLabel } from "../InputLabel";
-import { FormData } from "./../../dataType";
+import { FormData } from "./../../types/index";
 import "./styles.scss";
 import "./../InputCheckbox/styles.scss";
 import { useState } from "react";
