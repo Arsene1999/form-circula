@@ -1,0 +1,21 @@
+.headerCSS{
+    width: 100%;
+    height: 75px;
+    background-color: #3B3F2F;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 630px;
+        display: flex;
+        justify-content: start;
+        padding: 25px 0;
+    }
+}
+
+.subHeader{
+    width: 100%;
+    height: 7px;
+    background-color: #92AF3A
+    ;
+}
