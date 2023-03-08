@@ -1,0 +1,12 @@
+.gridInput{ 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 38px;
+
+  div {
+    label:not(:last-child){
+        input{margin-bottom: 32px};  
+    }
+  }
+}

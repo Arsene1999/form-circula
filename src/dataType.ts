@@ -7,8 +7,8 @@ export type FormData = {
   des_observacoes: string;
   data_solicitacao: string;
   ensaios_solicitados: TestsRequested;
-  lotes: string;
-  qte_dias: string[];
+  lotes: lots;
+  qte_dias: HourT;
 };
 
 export type TestsRequested = {
@@ -35,15 +35,41 @@ export type TestsRequested = {
   des_outros_ensaios: string;
 };
 
-// export type HourT = {
-//   qtd_horas_1: string;
-//   qtd_horas_2: string;
-//   qtd_horas_3: string;
-//   qtd_horas_4: string;
-//   qtd_horas_5: string;
-//   qtd_horas_6: string;
-//   qtd_horas_7: string;
-//   qtd_horas_8: string;
-//   qtd_horas_9: string;
-//   qtd_horas_10: string;
-// };
+export type HourT = {
+  qtd_horas_1: string;
+  qtd_horas_2: string;
+  qtd_horas_3: string;
+  qtd_horas_4: string;
+  qtd_horas_5: string;
+  qtd_horas_6: string;
+  qtd_horas_7: string;
+  qtd_horas_8: string;
+  qtd_horas_9: string;
+  qtd_horas_10: string;
+};
+
+export type lots = {
+  lote_atv_principal: string;
+  lote_atv_secundario_1: string;
+  lote_atv_secundario_2: string;
+  lote_atv_secundario_3: string;
+  lote_atv_secundario_5: string;
+  lote_atv_secundario_4: string;
+  lote_pre_principal: string;
+  lote_pre_secundario_1: string;
+  lote_pre_secundario_2: string;
+  lote_pre_secundario_3: string;
+  lote_pre_secundario_4: string;
+  lote_filler_1: string;
+  lote_filler_2: string;
+  lote_filler_3: string;
+  lote_filler_4: string;
+  lote_filler_5: string;
+  lote_aditivo_1: string;
+  lote_aditivo_2: string;
+  lote_aditivo_3: string;
+  lote_aditivo_4: string;
+  lote_aditivo_5: string;
+  lote_cimento_portland: string;
+  fl_no_lotes: string;
+};

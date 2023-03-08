@@ -58,3 +58,33 @@ h3{
   line-height: 120%;
   padding: 40px 0 25px;
 }
+
+input[type="checkbox"] {
+  --checkbox-fill-color: #92AF3A;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked::before {
+  background-color: var(--checkbox-fill-color);
+  content: "\2713";
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:not(:checked) {
+  background-color: white;
+}
+

@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
+import Button from "./components/Button";
+import FifthSection from "./components/FifthSection";
 import FirstSection from "./components/FirstSection";
 import FourthSection from "./components/FourthSection";
 import SelectSection from "./components/SelectSection";
@@ -21,7 +23,8 @@ function App() {
       <SelectSection register={register} />
       <ThirdSection register={register} />
       <FourthSection register={register} />
-      <button type="submit">Enviar</button>
+      <FifthSection register={register} />
+      <Button text={"Enviar solicitação"} />
     </form>
   );
 }
