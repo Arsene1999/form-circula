@@ -1,0 +1,12 @@
+.labelCSS{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+.inputCSS{ 
+    color: white; 
+    display: flex; 
+    width: auto; 
+}
