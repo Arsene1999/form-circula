@@ -17,11 +17,10 @@ function Principal() {
   } = useForm<FormData>();
 
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open(
       "POST",
-      "https://s6s2ykxn92.execute-api.us-east-1.amazonaws.com/form-test/"
+      "https://9h8o6lb5g3.execute-api.us-east-2.amazonaws.com/sandbox/send"
     );
     xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.send(JSON.stringify(data));
@@ -30,6 +29,7 @@ function Principal() {
         var response = JSON.parse(xmlhttp.responseText);
         if (xmlhttp.status === 200) {
           console.log("successful");
+          navigate("/secundary");
           //document.getElementById("contact-form").innerHTML = "<h1>O responsável será avisado sobre a Ordem de Serviço solicitada. Obrigado.</h1>";
         } else {
           console.log("failed");
@@ -43,15 +43,12 @@ function Principal() {
     <>
       <form onSubmit={onSubmit}>
         <h4 className="title">Solicitação de ensaios</h4>
-        <FirstSection register={register} />
+        <FirstSection register={register} errors={errors} />
         <SelectSection register={register} />
         <ThirdSection register={register} />
         <FourthSection register={register} />
         <FifthSection register={register} />
-        <Button
-          text={"Enviar solicitação"}
-          onClick={() => navigate("/secundary")}
-        />
+        <Button text={"Enviar solicitação"} onClick={() => {}} />
       </form>
     </>
   );

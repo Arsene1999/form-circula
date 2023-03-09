@@ -1,14 +1,24 @@
 import { forwardRef, ForwardRefRenderFunction } from "react";
+import { FieldError } from "react-hook-form";
 import "./styles.scss";
 
 interface InputLabelProp {
   text: string;
   disabled?: boolean;
   type?: "text" | "number";
+  error?: FieldError;
+  errorMensage?: string;
 }
 
 const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputLabelProp> = (
-  { text, type = "text", disabled = false, ...rest }: InputLabelProp,
+  {
+    text,
+    type = "text",
+    disabled = false,
+    error,
+    errorMensage,
+    ...rest
+  }: InputLabelProp,
   ref
 ) => {
   return (
@@ -23,6 +33,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputLabelProp> = (
           {...rest}
         />
         <span className="input__label">{text}</span>
+        {!!error && <span className="spanError">{errorMensage}</span>}
       </label>
     </>
   );
