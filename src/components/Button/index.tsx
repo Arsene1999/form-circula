@@ -1,13 +1,16 @@
 import "./styles.scss";
 
-interface ButtonProps {
+type ButtonProps = {
   text: string;
-}
+  onClick: () => void;
+};
 
-function Button({ text }: ButtonProps) {
+function Button({ text, onClick }: ButtonProps) {
   return (
     <div className="buttonStyle">
-      <button type="submit">{text}</button>
+      <button type="submit" onClick={() => onClick()}>
+        {text}
+      </button>
     </div>
   );
 }
